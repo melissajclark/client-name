@@ -1,10 +1,8 @@
 <!-- wp:template-part {"slug":"header","theme":"client-name","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"client-name-site-main client-name-section","align":"full","layout":{"type":"constrained"}} -->
-<main class="wp-block-group client-name-site-main client-name-section alignfull"><!-- wp:post-title {"level":1} /-->
+<!-- wp:group {"tagName":"main","align":"full","className":"client-name-site-main client-name-section","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull client-name-site-main client-name-section"><!-- wp:post-title {"level":1} /-->
 
-    <!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->
-    
     <!-- wp:paragraph -->
     <p>Examples below display the default styling for various elements on the website.</p>
     <!-- /wp:paragraph -->
@@ -29,7 +27,11 @@
     <!-- /wp:list-item -->
     
     <!-- wp:list-item -->
-    <li><a href="#embeds">Embeds</a></li>
+    <li><a href="#media-text">Media &amp; Text</a></li>
+    <!-- /wp:list-item -->
+    
+    <!-- wp:list-item -->
+    <li><a href="#embeds">Embeds</a> (youtube)</li>
     <!-- /wp:list-item -->
     
     <!-- wp:list-item -->
@@ -39,8 +41,8 @@
     <!-- /wp:list-item --></ul>
     <!-- /wp:list -->
     
-    <!-- wp:group {"align":"full","backgroundColor":"transparent","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-transparent-background-color has-background" id="headings"><!-- wp:heading {"level":1,"className":"wp-block-heading"} -->
+    <!-- wp:group {"align":"full","backgroundColor":"white","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull has-white-background-color has-background" id="headings"><!-- wp:heading {"level":1,"className":"wp-block-heading"} -->
     <h1 class="wp-block-heading" id="heading-1">Heading 1</h1>
     <!-- /wp:heading -->
     
@@ -142,6 +144,16 @@
     
     <!-- wp:paragraph -->
     <p>Aliquid animi quos ipsa, nulla nobis incidunt natus, voluptatum culpa iste porro velit.</p>
+    <!-- /wp:paragraph --></div>
+    <!-- /wp:group -->
+    
+    <!-- wp:group {"align":"wide","backgroundColor":"secondary","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignwide has-secondary-background-color has-background"><!-- wp:heading -->
+    <h2 class="wp-block-heading">Wide Group Example</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque maiores eligendi, dolores fuga corporis eos sapiente natus. </p>
     <!-- /wp:paragraph --></div>
     <!-- /wp:group -->
     
@@ -303,8 +315,8 @@
     <h4 class="wp-block-heading">Image with caption with wide alignment:</h4>
     <!-- /wp:heading -->
     
-    <!-- wp:image {"align":"wide","id":20,"sizeSlug":"large","linkDestination":"none"} -->
-    <figure class="wp-block-image alignwide size-large"><img src="http://client.test/wp-content/uploads/2023/04/kieran-taylor-xnwmORhx4rc-unsplash-scaled.jpg" alt="" class="wp-image-20"/><figcaption class="wp-element-caption">Photo by Andrea De Santis on Unsplash</figcaption></figure>
+    <!-- wp:image {"align":"wide","id":19,"sizeSlug":"large","linkDestination":"none"} -->
+    <figure class="wp-block-image alignwide size-large"><img src="http://client.test/wp-content/uploads/2023/04/anita-austvika-flLuRf8ARvM-unsplash-1024x683.jpg" alt="" class="wp-image-19"/><figcaption class="wp-element-caption">Photo by Andrea De Santis on Unsplash</figcaption></figure>
     <!-- /wp:image -->
     
     <!-- wp:heading {"level":3} -->
@@ -329,6 +341,12 @@
     <figure class="wp-block-embed alignwide is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
     https://youtu.be/6Y3zqIL23i0
     </div><figcaption class="wp-element-caption">Youtube embed with a caption and wide alignment</figcaption></figure>
+    <!-- /wp:embed -->
+    
+    <!-- wp:embed {"url":"https://twitter.com/melissajclark_/status/1583935749367377920","type":"rich","providerNameSlug":"twitter","responsive":true} -->
+    <figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">
+    https://twitter.com/melissajclark_/status/1583935749367377920
+    </div></figure>
     <!-- /wp:embed -->
     
     <!-- wp:heading {"level":3} -->
@@ -375,7 +393,57 @@
     <div class="wp-block-group alignfull has-secondary-background-color has-background"><!-- wp:table {"align":"wide","className":"is-style-regular"} -->
     <figure class="wp-block-table alignwide is-style-regular"><table><thead><tr><th>Industry</th><th>Another column of data just for testing hello</th><th>2022 Q2 Growth Rate (% year-on-year, not seasonally adjusted)</th></tr></thead><tbody><tr><td>Educational services</td><td>Financial and insurance</td><td>-1.41%</td></tr><tr><td>Financial and insurance</td><td>Public administration</td><td>1.32%</td></tr><tr><td>Real estate and rental and leasing</td><td>Financial and insurance</td><td>3.59%</td></tr><tr><td>Health care and social assistance</td><td>Construction</td><td>3.61%</td></tr><tr><td>Construction</td><td>Public administration</td><td>5.20%</td></tr><tr><td>Total all industries</td><td>Real estate and rental and leasing</td><td>5.25%</td></tr><tr><td>Public administration</td><td>Public administration</td><td>5.53%</td></tr></tbody></table></figure>
     <!-- /wp:table --></div>
-    <!-- /wp:group --></main>
+    <!-- /wp:group -->
+    
+    <!-- wp:heading -->
+    <h2 class="wp-block-heading" id="media-text">Media and Text</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph -->
+    <p><strong>Default alignment with background colour:</strong></p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:media-text {"align":"","mediaPosition":"right","mediaId":19,"mediaLink":"http://client.test/anita-austvika-fllurf8arvm-unsplash/","mediaType":"image","backgroundColor":"white"} -->
+    <div class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile has-white-background-color has-background"><div class="wp-block-media-text__content"><!-- wp:heading -->
+    <h2 class="wp-block-heading">Media and Text</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph -->
+    <p>Vivamus quis turpis sed dui aliquet eleifend. Nunc vitae justo turpis. Maecenas et scelerisque dolor. Quisque sit amet lectus ac lacus accumsan ornare. Sed in enim in justo elementum consectetur.</p>
+    <!-- /wp:paragraph --></div><figure class="wp-block-media-text__media"><img src="http://client.test/wp-content/uploads/2023/04/anita-austvika-flLuRf8ARvM-unsplash-1024x683.jpg" alt="" class="wp-image-19 size-full"/></figure></div>
+    <!-- /wp:media-text -->
+    
+    <!-- wp:paragraph -->
+    <p>Vivamus quis turpis sed dui aliquet eleifend. Nunc vitae justo turpis. Maecenas et scelerisque dolor. Quisque sit amet lectus ac lacus accumsan ornare. Sed in enim in justo elementum consectetur.</p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:paragraph -->
+    <p><strong>Wide alignment with no background colour:</strong></p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:media-text {"mediaId":19,"mediaLink":"http://client.test/anita-austvika-fllurf8arvm-unsplash/","mediaType":"image"} -->
+    <div class="wp-block-media-text alignwide is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="http://client.test/wp-content/uploads/2023/04/anita-austvika-flLuRf8ARvM-unsplash-1024x683.jpg" alt="" class="wp-image-19 size-full"/></figure><div class="wp-block-media-text__content"><!-- wp:heading -->
+    <h2 class="wp-block-heading">Media and Text</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph -->
+    <p>Vivamus quis turpis sed dui aliquet eleifend. Nunc vitae justo turpis. Maecenas et scelerisque dolor. Quisque sit amet lectus ac lacus accumsan ornare. Sed in enim in justo elementum consectetur.</p>
+    <!-- /wp:paragraph --></div></div>
+    <!-- /wp:media-text -->
+    
+    <!-- wp:paragraph -->
+    <p><strong>Full alignment with background colour:</strong></p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:media-text {"align":"full","mediaPosition":"right","mediaId":19,"mediaLink":"http://client.test/anita-austvika-fllurf8arvm-unsplash/","mediaType":"image","backgroundColor":"primary"} -->
+    <div class="wp-block-media-text alignfull has-media-on-the-right is-stacked-on-mobile has-primary-background-color has-background"><div class="wp-block-media-text__content"><!-- wp:heading -->
+    <h2 class="wp-block-heading">Media and Text</h2>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph -->
+    <p>Vivamus quis turpis sed dui aliquet eleifend. Nunc vitae justo turpis. Maecenas et scelerisque dolor. Quisque sit amet lectus ac lacus accumsan ornare. Sed in enim in justo elementum consectetur.</p>
+    <!-- /wp:paragraph --></div><figure class="wp-block-media-text__media"><img src="http://client.test/wp-content/uploads/2023/04/anita-austvika-flLuRf8ARvM-unsplash-1024x683.jpg" alt="" class="wp-image-19 size-full"/></figure></div>
+    <!-- /wp:media-text --></main>
     <!-- /wp:group -->
     
     <!-- wp:template-part {"slug":"footer","theme":"client-name","tagName":"footer"} /-->

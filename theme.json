@@ -74,7 +74,7 @@
 				},
 				{
 					"slug": "primary",
-					"color": "purple",
+					"color": "aqua",
 					"name": "Primary"
 				},
 				{
@@ -201,6 +201,13 @@
 			"text": "var(--wp--preset--color--foreground)"
 		},
 		"elements": {
+			"caption" : {
+				"typography": {
+					"fontSize": "calc( var(--wp--custom--font-size--body) * 0.8)",
+					"fontFamily": "var(--wp--custom--font-family--body)",
+					"lineHeight": "1.5"
+				}
+			},
 			"h1" : {
 				"typography": {
 					"fontSize" : "var(--wp--custom--heading-size--1)"
@@ -279,8 +286,9 @@
 	],
 	"customTemplates": [
 		{
-			"name": "page-style-guide",
+			"name": "template-style-guide",
 			"title": "Style Guide",
+			"description": "Page with example blocks like buttons, forms, images, and more.",
 			"postTypes": [ "post","page" ]
 		}
 	]
