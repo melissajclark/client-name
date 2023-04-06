@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: repeat(23, 1fr);
   gap:0 2rem;
-  // justify-content:start;
 }
 
 // left right padding on the website
@@ -63,7 +62,7 @@
     clip: auto !important;
     color: #000;
     display: block;
-    font-size:var(--wp--preset--font-size--body);
+    font-size:var(--wp--custom--font-size--body);
     font-weight: bold;
     height: auto;
     left: 5px;

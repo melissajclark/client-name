@@ -40,25 +40,18 @@
         margin-right: 0 !important;
     }
 
-    // .alignfull > .alignfull {
-    //     max-width: 100%;
-    //     width:100%;
-    //     margin-left: 0;
-    //     margin-right: 0;
-    //     padding-left: 0;
-    //     padding-right: 0;
-    // }
-
     @include breakpoint(medium){
         
         // default grid placement
         .client-name-grid,
         .client-name-section,
+        .wp-block-post-content,
         .client-name-section > .alignfull.wp-block-group {
             @include site-grid;
     
             > :where(:not(.alignwide):not(.alignfull)) {
                 grid-column: 6 / 19;
+                width:100%;
             }
         }
 
@@ -87,8 +80,9 @@
     .alignfull {
         grid-column: 1 / -1;
     }
-
-    .alignfull .alignfull {
+    
+    .alignfull .wp-block-query.alignfull,
+    .alignfull .wp-block-post-content.alignfull {
         max-width: 100%;
         width: 100%;
     }
