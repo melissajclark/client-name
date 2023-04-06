@@ -7,17 +7,9 @@
 		font-family: var(--wp--custom--font-family--headings);
 	}
 
-	&__label {
-		@include screen-reader-text;
-	}
-
-	&__button .search-icon {
-		display: none;
-	}
-
 	&__button {
 		margin-left: 0;
-		padding:var(--wp--custom--button--padding) var(--wp--custom--button--padding);
+		padding:var(--wp--custom--button--padding);
 	}
 }
 
@@ -25,13 +17,13 @@
 	padding:0;
 }
 
-.wp-block-search__button-inside .wp-block-search__button,
-.wp-block-search__button-inside .wp-block-search__input {
-	border: none;
-	background-color: transparent;
-	color:currentColor;
+// .wp-block-search__button-inside .wp-block-search__button,
+// .wp-block-search__button-inside .wp-block-search__input {
+// 	border: none;
+// 	background-color: transparent;
+// 	color:currentColor;
 
-	::placeholder {
-		color:currentColor;
-	}
-}
+// 	::placeholder {
+// 		color:currentColor;
+// 	}
+// }
