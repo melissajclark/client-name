@@ -1,0 +1,40 @@
+.screen-reader-text {
+    @include screen-reader-text;
+}
+
+.alignfull {
+    @include alignfull;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.client-name-side-padding {
+    @include site-grid-padding;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.remove-padding {
+    padding:0 !important;
+}

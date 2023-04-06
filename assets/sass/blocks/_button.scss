@@ -1,0 +1,21 @@
+// CSS below done in theme.json for regular link buttons
+.gform_button,
+.gform_page_footer button {
+	color: var(--wp--custom--button--text);
+	padding: var(--wp--custom--button--padding);
+	font-size: var(--wp--custom--button--text-size);
+	font-family: var(--wp--custom--font-family--headings);
+	text-transform: uppercase;
+	letter-spacing: 0.14px;
+	font-weight: 600;
+	line-height: 1.83;
+	border-radius: 0px;
+	border-style: solid;
+}
+
+.wp-block-button__link,
+.wp-element-button,
+.gform_page_footer button,
+.gform_button {
+	@include primary-button;
+}

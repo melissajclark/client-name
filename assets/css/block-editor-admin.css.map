@@ -1,0 +1,1 @@
+{"version":3,"sources":["block-editor-admin.scss"],"names":[],"mappings":"AACA,8DACI,uBAAwB","file":"block-editor-admin.css","sourcesContent":["// hide message about no fields for a block\n.acf-block-component .acf-block-fields.acf-empty-block-fields {\n    display: none !important;\n}"]}

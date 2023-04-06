@@ -1,0 +1,13 @@
+.wp-block-columns {    
+    @include breakpoint(preMedium) {
+        flex-wrap:wrap !important;
+
+        &:not(.is-not-stacked-on-mobile)>.wp-block-column {
+            flex-basis:auto;
+        }
+    }
+}
+
+.wp-block-column > .wp-block-heading {
+    margin-top: 0;
+}

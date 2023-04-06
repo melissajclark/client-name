@@ -1,0 +1,16 @@
+body {
+    --site-padding : 6vw;
+
+    @include breakpoint(medium) {
+        --site-padding : 5.05vw;
+        --wp--custom--heading--1 : 2.5rem;
+        --wp--custom--heading--2 : 2rem;
+        --wp--custom--heading--3 : 1.5rem;
+        --wp--custom--heading--4-5-6 : 1.25rem;
+        --wp--custom--spacing--below-text : 3rem;
+    }
+
+    @include breakpoint(giant){
+        --site-padding : 10vw;
+    }
+}

@@ -1,0 +1,4 @@
+// hide message about no fields for a block
+.acf-block-component .acf-block-fields.acf-empty-block-fields {
+    display: none !important;
+}

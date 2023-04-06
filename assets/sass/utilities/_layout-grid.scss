@@ -1,0 +1,95 @@
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+@include breakpoint(little){
+    .wp-site-blocks {
+        display:flex;
+        min-height:100vh; 
+        flex-direction:column;
+    }
+    
+    .client-name-site-main {
+        flex:1;
+    }
+}
+
+.entry-content {
+    > :last-child {
+        padding-bottom: var(--wp--custom--spacing--vertical);
+    }
+}
+
+// client-name-section class is used on the .entry-content, site header & footer
+.wp-site-blocks {
+
+    // left and right padding
+    // .client-name-site-main-single > .alignfull,
+    .client-name-side-padding,
+    .client-name-section > .alignfull,
+    .wp-block-template-part > .alignfull,
+    .client-name-section {
+        @include site-grid-padding;
+    }
+
+    .client-name-section > .alignfull.wp-block-image {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // ovveride WP css
+   .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    // .alignfull > .alignfull {
+    //     max-width: 100%;
+    //     width:100%;
+    //     margin-left: 0;
+    //     margin-right: 0;
+    //     padding-left: 0;
+    //     padding-right: 0;
+    // }
+
+    @include breakpoint(medium){
+        
+        // default grid placement
+        .client-name-grid,
+        .client-name-section,
+        .client-name-section > .alignfull.wp-block-group {
+            @include site-grid;
+    
+            > :where(:not(.alignwide):not(.alignfull)) {
+                grid-column: 6 / 19;
+            }
+        }
+
+        .alignwide {
+            grid-column: 4 / 21;
+        }
+
+        .entry-content {
+            .wp-block-search__inside-wrapper {
+                width:100% !important;
+            }
+        } // grid placement just on post content
+    } // medium
+
+    @include breakpoint(large){
+        .client-name-site-footer-part-two {
+            grid-column: 13 / 18;
+        }
+
+        .client-name-site-footer-part-three {
+            grid-column: 19 / -1;
+        }
+    }
+
+    .alignfull .alignfull,
+    .alignfull {
+        grid-column: 1 / -1;
+    }
+
+    .alignfull .alignfull {
+        max-width: 100%;
+        width: 100%;
+    }
+} // content

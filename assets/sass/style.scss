@@ -1,0 +1,54 @@
+/*!
+Theme Name: Client Name
+Author: Melissa Clark
+Author URI: https://melissajclark.ca
+Theme URI: https://clientname.com
+Tags: full-site-editing, editor-style, block-styles, block-patterns
+Text Domain: client-name
+Requires at least: 6.1
+Requires PHP: 7.4
+Tested up to: 6.2
+Version: 1.0.0
+
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// front end only styling and resets
+body {
+    --wp--style--global--content-size: 100%;
+    --wp--style--global--wide-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    // margin-bottom: 0;
+    word-wrap: break-word;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+ul, ol {
+    margin-block-start: 0;
+
+    ol, ul {
+    margin-block-end:0;
+    }
+}
+
+p {
+    margin-block-start: 0;
+    // margin-block-end: 0;
+}
+
+@import "editor-and-front-end";

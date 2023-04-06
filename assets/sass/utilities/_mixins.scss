@@ -1,0 +1,126 @@
+// grid used for all layouts on the website
+@mixin site-grid {
+  display: grid;
+  grid-template-columns: repeat(23, 1fr);
+  gap:0 2rem;
+  // justify-content:start;
+}
+
+// left right padding on the website
+@mixin site-grid-padding {
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin alignfull {
+  margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+// default button settings
+@mixin primary-button {
+	color: var(--wp--custom--button--text);
+	background-color: var(--wp--custom--button--background);
+	border-color: var(--wp--custom--button--border);
+	border-width: var(--wp--custom--button--border-width);
+	padding:var(--wp--custom--button--padding);
+
+	&:hover {
+		background-color: var(--wp--custom--button-hover--background);
+		border-color: var(--wp--custom--button-hover--border);
+		color: var(--wp--custom--button-hover--text);
+	}
+
+	&:focus {
+		background-color: var(--wp--custom--button-focus--background);
+		border-color: var(--wp--custom--button-focus--border);
+		color: var(--wp--custom--button-focus--text);
+		outline-color: var(--wp--custom--button-focus--outline);
+		outline-width:1px;
+		outline-style: dotted;
+	}
+}
+
+@mixin screen-reader-text {
+  /* Text meant only for screen readers. */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  &:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #000;
+    display: block;
+    font-size:var(--wp--preset--font-size--body);
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+}
+
+// Media Query Breakpoints
+@mixin breakpoint($point) {
+  $bp-massive:    "(min-width: 2200px)"; // giant desktops
+  $bp-giant:      "(min-width: 1800px)"; // large desktops
+  $bp-huge:       "(min-width: 1679px)";
+  $bp-large:      "(min-width: 1440px)";
+  $bp-preMedium:  "(max-width: 1099px)";
+  $bp-medium:     "(min-width: 1100px)";
+  $bp-little:     "(min-width: 782px)";
+  $bp-preLittle:  "(max-width: 781px)";
+  $bp-tiny:       "(min-width: 642px)";
+  $bp-preTiny:    "(max-width: 641px)";
+  $bp-mini:       "(min-width: 350px)";
+
+  @if $point == massive {
+    @media #{$bp-massive} { @content; }
+  }
+  @elseif $point == giant {
+    @media #{$bp-giant} { @content; }
+  }
+  @elseif $point == huge {
+    @media #{$bp-huge} { @content; }
+  }
+  @else if $point == large {
+    @media #{$bp-large} { @content; }
+  }
+  @else if $point == preMedium {
+    @media #{$bp-preMedium}  { @content; }
+  }
+  @else if $point == medium {
+    @media #{$bp-medium}  { @content; }
+  }
+  @else if $point == little {
+    @media #{$bp-little}  { @content; }
+  }
+  @else if $point == preLittle {
+    @media #{$bp-preLittle}  { @content; }
+  }
+  @else if $point == tiny {
+    @media #{$bp-tiny}  { @content; }
+  }
+  @else if $point == preTiny {
+    @media #{$bp-preTiny}  { @content; }
+  }
+  @else if $point == mini {
+    @media #{$bp-mini}  { @content; }
+  }
+}

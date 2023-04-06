@@ -1,0 +1,287 @@
+{
+	"version": 2,
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"settings": {
+		"appearanceTools": false,
+		"blocks": {
+            "core/button": {
+                "width" : [],
+                "border": {
+                    "color": false,
+                    "radius": false,
+                    "style": false,
+                    "width": false
+                },
+                "typography": {
+					"textTransform" : true
+                },
+				"color" : {
+					"background" : false
+				}
+            },
+			"core/post-terms" : {
+				"color" : {
+					"background" : false
+ 				}
+			},
+			"core/term-description" : {
+				"color" : {
+					"background" : false
+ 				}
+			},
+			"core/query-pagination" : {
+				"color" : {
+					"background" : false
+ 				}
+			},
+			"core/table" : {
+				"color" : {
+					"palette": []
+				}
+			}
+        },
+		"color": {
+			"text": false,
+			"background": true,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"gradients" : [],
+            "link": false,
+			"palette": [
+				{
+					"slug": "transparent",
+					"color": "transparent",
+					"name": "Transparent"
+				},
+				{
+					"slug": "white",
+					"color": "#fff",
+					"name": "White"
+				},
+				{
+					"slug": "background",
+					"color": "#efefef",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#222222",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "purple",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "pink",
+					"name": "Secondary"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "860px",
+			"wideSize": "1200px"
+		},
+		"spacing": {
+			"blockGap": null,
+			"margin": false,
+			"padding": false,
+			"units": [],
+			"customSpacingSize": false
+		},
+		"typography": {
+			"customFontSize": false,
+			"fontStyle": false,
+			"fontWeight": false,
+			"fluid" : false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"textTransform": false,
+			"dropCap": false,
+			"fontFamilies": [],
+			"fontSizes": []
+		},
+		"custom": {
+			"button" : {
+				"background" : "var(--wp--preset--color--foreground)",
+				"border" : "var(--wp--preset--color--foreground)",
+				"border-width" : "3px",
+				"text" : "var(--wp--preset--color--background)",
+				"text-size" : "1rem",
+				"padding" : "0.49rem 1.1rem"
+			},
+			"button-hover" : {
+				"background" : "var(--wp--preset--color--background)",
+				"border" : "var(--wp--preset--color--background)",
+				"text" : "var(--wp--preset--color--foreground)"
+			},
+			"button-focus" : {
+				"background" : "var(--wp--preset--color--name1)",
+				"border" : "var(--wp--preset--color--name3)",
+				"outline" : "var(--wp--preset--color--name4)",
+				"text" : "var(--wp--preset--color--foreground)"
+			},
+			"color" : {
+				"custom-color": ""
+			},
+			"form" : {
+				"input-background" : "var(--wp--preset--color--background)",
+				"input-border" : "var(--wp--preset--color--foreground)",
+				"input-outline" : "var(--wp--preset--color--primary)"
+			},
+			"font-family" : {
+				"body" : "\"Georgia\",serif",
+				"headings" : "\"Arial\",sans-serif"
+			},
+			"font-size" : {
+				"body" : "1.25rem"
+			},
+			"heading-size" : {
+				"1" : "4rem",
+				"2" : "3rem",
+				"3" : "2.25rem"
+			},
+			"space" : {
+				"vertical" : "1rem" 
+			}
+		},
+		"useRootPaddingAwareAlignments": false
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border" : {
+					"color" : "var(--wp--custom--button--border)",
+					"radius" : "0px",
+					"style" : "solid",
+					"width": "var(--wp--custom--button--border-width)"
+				},
+				"color": {
+					"background": "var(--wp--custom--button--background)",
+					"text": "var(--wp--custom--button--text)"
+				},
+				"typography": {
+					"fontFamily" : "var(--wp--custom--font-family--headings)",
+					"fontSize": "var(--wp--custom--button--text-size)",
+					"letterSpacing" : "",
+					"fontWeight" : "",
+					"lineHeight" : ""
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontFamily" : "var(--wp--custom--font-family--headings)",
+					"lineHeight" : "1.35"
+				}
+			},
+			"core/group": {
+				"spacing" : {
+					"padding": {
+						"top" : "var(--wp--custom--space--vertical)",
+						"bottom" : "var(--wp--custom--space--vertical)"
+					}
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--1)",
+					"fontFamily" : "var(--wp--custom--font-family--headings)"
+				}
+			}
+		},
+		"color": {
+			"background": "var(--wp--preset--color--background)",
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"h1" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--1)"
+				}
+			},
+			"h2" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--2)"
+				}
+			},
+			"h3" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--3)"
+				}
+			},
+			"h4" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--4)"
+				}
+			},
+			"h5" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--5)"
+				}
+			},
+			"h6" : {
+				"typography": {
+					"fontSize" : "var(--wp--custom--heading-size--6)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary)"
+					},
+					"typography": {
+						"textDecoration": ""
+					}
+				},
+				":focus": {
+					"color": {
+						"text": ""
+					},
+					"typography": {
+						"textDecoration": ""
+					}
+				}
+			}
+		},
+		"spacing":{
+			"blockGap": "var(--wp--custom--space--vertical)"
+		},
+		"typography": {
+			"fontSize": "var(--wp--custom--font-size--body)",
+			"fontFamily": "var(--wp--custom--font-family--body)",
+			"lineHeight": "1.5"
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "page-style-guide",
+			"title": "Style Guide",
+			"postTypes": [ "post","page" ]
+		}
+	]
+}

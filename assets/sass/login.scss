@@ -1,0 +1,26 @@
+@import "utilities/all";
+@import "elements/links";
+@import "blocks/block-colours";
+
+// copy in variables from theme.json so they are available here
+:root {
+
+}
+
+// body
+.login {
+    background: var(--wp--preset--color--foreground);
+    color:var(--wp--preset--color--white);
+    font-size: var(--wp--custom--font-size--body);
+    font-family: var(--wp--custom--font-family--body);
+    @include site-grid-padding;
+
+    h1 a {
+        border-bottom: none;
+        background-image:url('../images/logo.png');
+        background-size:contain;
+        background-position: center;
+        height:150px;
+        width:75%;
+    }
+} // body

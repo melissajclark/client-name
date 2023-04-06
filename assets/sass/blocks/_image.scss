@@ -1,0 +1,12 @@
+.wp-block-image {
+    display: block;
+    margin-bottom:0;
+
+    img {
+        display: block;
+    }
+}
+
+[class*="wp-block"] figcaption {
+    text-align: left;
+}
