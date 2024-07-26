@@ -76,6 +76,14 @@ function client_name_styles() {
 		filemtime( get_stylesheet_directory() . '/assets/css/style.css' )
 	 );
 
+	wp_enqueue_script( 
+		'client-name-scripts', // handle (name)
+		get_template_directory_uri() . '/assets/js/theme.js', // file location
+		array('jquery'), // dependencies
+		filemtime( get_stylesheet_directory() . '/assets/js/theme.js' ),
+		true // load in footer 
+	);	
+
 }
 add_action( 'wp_enqueue_scripts', 'client_name_styles' );
 
