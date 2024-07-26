@@ -1,4 +1,4 @@
-node_modules/**/
+node_modules/
 license.txt
 readme.txt
 .DS_Store

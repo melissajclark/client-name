@@ -1,16 +1,67 @@
 {
-	"name": "julianmeanchoff",
-	"version": "1.0.0",
-	"description": "WordPress theme Gulp for MJC, Inc. by Julian Meanchoff.",
-	"devDependencies": {
-		"gulp": "^4.0.2",
-		"gulp-sass": "^4.0.2",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-autoprefixer": "^7.0.1",
-		"gulp-sourcemaps": "^2.6.5",
-		"gulp-rename": "^2.0.0",
-		"gulp-concat": "^2.6.1",
-		"gulp-uglify": "^3.0.2",
-		"browser-sync": "^2.26.7"
-	}
+  "name": "understrap-child",
+  "version": "1.2.0",
+  "description": "CSS compiling using Understrap's files.",
+  "main": "index.js",
+  "scripts": {
+    "bs": "browser-sync start --config assets/build/browser-sync.config.js",
+    "css": "npm-run-all css-compile css-postcss css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet assets/sass/style.scss:assets/css/style.css assets/sass/editor.scss:assets/css/editor.css assets/sass/login.scss:assets/css/login.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output assets/css/ --batch --batch-suffix \".min\" \"assets/css/*.css\" \"!assets/css/*.min.css\"",
+    "css-postcss": "postcss --config assets/build/postcss.config.js --replace \"assets/css/*.css\" \"!assets/css/*.min.css\"",
+    "watch": "npm-run-all --parallel watch-run-*",
+    "watch-bs": "npm-run-all --parallel bs watch-run-*",
+    "watch-run-css": "nodemon --watch assets/sass/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-js": "nodemon --watch assets/js/ --ext js --exec \"npm-run-all js\"",
+    "copy-assets": "node assets/build/copy-assets.js",
+    "dist": "npm-run-all --parallel css js",
+    "dist-build": "node assets/build/dist-build.js",
+    "dist-clean": "node assets/build/dist-clean.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/understrap/understrap-child.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "framework",
+    "underscores"
+  ],
+  "author": "The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/understrap/understrap-child/issues"
+  },
+  "homepage": "https://understrap.com",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@popperjs/core": "^2.11.6",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-multi-entry": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.1",
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.2",
+    "browser-sync": "^2.27.10",
+    "browserslist": "^4.21.4",
+    "caniuse-lite": "^1.0.30001430",
+    "clean-css-cli": "^5.6.1",
+    "font-awesome": "^4.7.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
+    "rollup": "^3.2.5",
+    "sass": "^1.56.0",
+    "terser": "^5.15.1",
+    "understrap": "github:understrap/understrap#develop"
+  }
 }
