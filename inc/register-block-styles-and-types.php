@@ -20,9 +20,9 @@
 function client_name_block_styles() {
 	wp_enqueue_script(
 		'client-name-block-styles',
-		get_stylesheet_directory_uri() . '/assets/js/block-styles-and-types.js',
+		get_stylesheet_directory_uri() . '/assets/js/block-editor.min.js',
 		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
-		filemtime( get_stylesheet_directory() . '/assets/js/block-styles-and-types.js' ),
+		filemtime( get_stylesheet_directory() . '/assets/js/block-editor.min.js' ),
 		true
 	);
 }

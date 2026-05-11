@@ -149,7 +149,7 @@ select:focus,
 select:hover,
 input[type]:focus,
 input[type]:hover {
-  --wp--custom--form--input-border: var(--wp--preset--color--foreground);
+  --wp--custom--form--input-border: var(--wp--preset--color--black);
 }
 textarea:hover,
 select:hover,

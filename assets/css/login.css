@@ -128,8 +128,8 @@ body {
 }
 
 .login {
-  background: var(--wp--preset--color--foreground);
-  color: var(--wp--preset--color--white);
+  background: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--black);
   font-size: var(--wp--custom--font-size--body);
   font-family: var(--wp--custom--font-family--body);
   padding-left: var(--site-padding);

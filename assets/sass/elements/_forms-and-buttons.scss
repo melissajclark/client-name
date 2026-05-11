@@ -59,7 +59,7 @@ select,
 input[type] {
     &:focus,
     &:hover {
-        --wp--custom--form--input-border : var(--wp--preset--color--foreground);
+        --wp--custom--form--input-border : var(--wp--preset--color--black);
     }
 
     &:hover {

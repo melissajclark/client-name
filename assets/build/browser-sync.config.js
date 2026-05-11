@@ -1,6 +1,6 @@
 module.exports = {
 	"proxy": "client.test",
 	"notify": true,
-	"files": ["./assets/**/*.css", "./assets/js/*.js", "./**/*.php"],
-    "open": "ui"
+	"files": ["./assets/**/*.css", "./assets/js/*.js", "./**/*.php", "./**/*.html"],
+    "open": "external"
 };

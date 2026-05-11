@@ -78,9 +78,9 @@ function client_name_styles() {
 
 	wp_enqueue_script( 
 		'client-name-scripts', // handle (name)
-		get_template_directory_uri() . '/assets/js/theme.js', // file location
+		get_template_directory_uri() . '/assets/js/theme.min.js', // file location
 		array('jquery'), // dependencies
-		filemtime( get_stylesheet_directory() . '/assets/js/theme.js' ),
+		filemtime( get_stylesheet_directory() . '/assets/js/theme.min.js' ),
 		true // load in footer 
 	);	
 
