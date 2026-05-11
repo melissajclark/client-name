@@ -1,18 +1,41 @@
 wp.domReady(() => {
 
 /**
+ * Remove annoying admin prompt to download block plugins
+ * https://wordpress.stackexchange.com/questions/414413/how-to-disable-block-directory
+ */
+if ( wp.plugins.getPlugin( 'block-directory' ) ) {
+	wp.plugins.unregisterPlugin( 'block-directory' );
+}
+
+/**
  * Block Types: remove unecessary blocks for this theme
  */
+	wp.blocks.unregisterBlockType( 'core/accordion' );
+	wp.blocks.unregisterBlockType( 'core/avatar' );
+	wp.blocks.unregisterBlockType( 'core/archives' );
 	wp.blocks.unregisterBlockType( 'core/calendar' );
 	wp.blocks.unregisterBlockType( 'core/comments' );
+	wp.blocks.unregisterBlockType( 'core/details' );
+	wp.blocks.unregisterBlockType( 'core/loginout' );
 	wp.blocks.unregisterBlockType( 'core/latest-comments' );
+	wp.blocks.unregisterBlockType( 'core/latest-posts' );
 	wp.blocks.unregisterBlockType( 'core/more' );
 	wp.blocks.unregisterBlockType( 'core/nextpage' );
+	wp.blocks.unregisterBlockType( 'core/post-author-name' );
+	wp.blocks.unregisterBlockType( 'core/post-author' );
+	// wp.blocks.unregisterBlockType( 'core/post-date' );
+	wp.blocks.unregisterBlockType( 'core/post-author-biography' );
+	wp.blocks.unregisterBlockType( 'core/post-time-to-read' );
+	wp.blocks.unregisterBlockType( 'core/post-comments-count' );
+	wp.blocks.unregisterBlockType( 'core/post-comments-link' );
 	wp.blocks.unregisterBlockType( 'core/pullquote' );
+	wp.blocks.unregisterBlockType( 'core/read-more' );
+	wp.blocks.unregisterBlockType( 'core/rss' );
 	wp.blocks.unregisterBlockType( 'core/post-comments-form' );
 	wp.blocks.unregisterBlockType( 'core/tag-cloud' );
+	wp.blocks.unregisterBlockType( 'core/term-count' );
 	wp.blocks.unregisterBlockType( 'core/verse' );
-
 /**
  * Block Styles: Remove unecessary block styles for this theme
  */
@@ -43,6 +66,10 @@ wp.domReady(() => {
 	// table
 	wp.blocks.unregisterBlockStyle( 'core/table', 'default' );
 	wp.blocks.unregisterBlockStyle( 'core/table', 'stripes' );
+
+	// Remove stretchy text
+	wp.blocks.unregisterBlockVariation( 'core/paragraph', 'stretchy-paragraph' );
+	wp.blocks.unregisterBlockVariation( 'core/heading', 'stretchy-heading' );
 
 
 	/**
