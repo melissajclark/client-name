@@ -15,10 +15,6 @@
     padding-left: 0;
 }
 
-.client-name-side-padding {
-    @include site-grid-padding;
-}
-
 .no-padding-top {
     padding-top: 0 !important;
 }

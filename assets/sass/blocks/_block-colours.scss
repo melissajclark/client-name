@@ -1,34 +1,37 @@
 // update section colours based on background colour of section
-.has-xxxx-background-color {
+.has-purple-background-color, 
+.has-black-background-color {
+    color:var(--wp--preset--color--white);
+
     // links
     a:where(:not(.wp-element-button)) {
         &:hover {
-            border-color: var(--wp--preset--color--colour1);
+            border-color: var(--wp--preset--color--white);
         }
 
         &:focus {
-            border-color: var(--wp--custom--button--foreground);
+            border-color: var(--wp--custom--button--white);
         }
     }
 
     // buttons
     .gform_page_footer button,
     .gform_button,
-    .wp-element-button,
-    .wp-block-button__link {
-        --wp--custom--button--background: var(--wp--preset--color--foreground);
-        --wp--custom--button--text: var(--wp--preset--color--colour2);
-        --wp--custom--button--border: var(--wp--preset--color--foreground);
+    .wp-element-button {
+        --wp--custom--button--background: var(--wp--preset--color--white);
+        --wp--custom--button--text: var(--wp--preset--color--black);
+        --wp--custom--button--border: var(--wp--preset--color--white);
 
         &:hover {
-            --wp--custom--button-hover--border: var(--wp--preset--color--foreground);
-            --wp--custom--button-hover--background: var(--wp--preset--color--foreground);
+            --wp--custom--button-hover--border: var(--wp--preset--color--white);
+            --wp--custom--button-hover--background: transparent;
+            --wp--custom--button-hover--text: var(--wp--preset--color--white);
         }
 
         &:focus {
-            --wp--custom--button-focus--background: var(--wp--preset--color--foreground);
-            --wp--custom--button-focus--text: var(--wp--preset--color--colour2);
-            --wp--custom--button-focus--border: var(--wp--preset--color--foreground);
+            --wp--custom--button-focus--background: var(--wp--preset--color--white);
+            --wp--custom--button-focus--text: var(--wp--preset--color--black);
+            --wp--custom--button-focus--outline: var(--wp--preset--color--black);
         }
     }
 }

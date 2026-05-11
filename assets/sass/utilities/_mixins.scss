@@ -42,8 +42,9 @@
 		border-color: var(--wp--custom--button-focus--border);
 		color: var(--wp--custom--button-focus--text);
 		outline-color: var(--wp--custom--button-focus--outline);
-		outline-width:1px;
-		outline-style: dotted;
+		outline-width:2px;
+		outline-style: solid;
+    outline-offset: 2px;
 	}
 }
 
