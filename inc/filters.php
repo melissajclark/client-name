@@ -105,3 +105,12 @@ add_filter(
 		return 30;
 	}
 );
+
+
+/**
+ * Move Yoast down
+ */
+function vs_yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'vs_yoasttobottom');
