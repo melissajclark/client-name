@@ -71,9 +71,9 @@ function client_name_styles() {
 
 	wp_enqueue_style( 
 	    'client-name-style', 
-	    get_stylesheet_directory_uri() . '/assets/css/style.css',
+	    get_stylesheet_directory_uri() . '/assets/css/style.min.css',
 	    array(),
-		filemtime( get_stylesheet_directory() . '/assets/css/style.css' )
+		filemtime( get_stylesheet_directory() . '/assets/css/style.min.css' )
 	 );
 
 	wp_enqueue_script( 
@@ -117,9 +117,6 @@ add_filter( 'login_headerurl', 'client_name_login_url' );
 
 // Filters.
 require_once get_theme_file_path( 'inc/filters.php' );
-
-// Block variations
-require_once get_theme_file_path( 'inc/register-block-variations.php' );
 
 // Block style and types
 require_once get_theme_file_path( 'inc/register-block-styles-and-types.php' );
